@@ -1,4 +1,6 @@
-public abstract class User extends Object {
+import java.io.Serializable;
+
+public abstract class User implements Serializable {
 
     private String firstName;
     private String lastName;

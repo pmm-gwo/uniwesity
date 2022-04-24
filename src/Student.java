@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 public class Student extends User {
 
     private long albumNumber;
