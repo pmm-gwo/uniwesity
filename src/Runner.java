@@ -1,7 +1,10 @@
 public class Runner {
 
     public static void main(String[] args) {
-        System.out.println("test");
+        Student student1 = new Student("Jan", "Bobowski",
+                "janek342@gmail.com", "Jan@13", 344421L);
+        Teacher teacher1 = new Teacher("Małgorzata", "Kowalska",
+                "kowalska@gmail.com", "malg@onE", "mgr");
     }
 
 }
