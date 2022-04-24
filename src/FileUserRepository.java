@@ -44,4 +44,16 @@ public class FileUserRepository
         return users;
     }
 
+    @Override
+    public User findByEmailAndPassword(String email, String password) {
+        List<User> users = findAll();
+        for (User user: users) {
+            if (user.getEmail().equalsIgnoreCase(email)
+                && user.getPassword().equals(password)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
 }

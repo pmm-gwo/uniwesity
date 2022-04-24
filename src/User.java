@@ -4,6 +4,7 @@ public abstract class User implements Serializable {
 
     private String firstName;
     private String lastName;
+
     private String email;
     private String password;
 
@@ -14,4 +15,13 @@ public abstract class User implements Serializable {
         this.email = email;
         this.password = password;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
 }
