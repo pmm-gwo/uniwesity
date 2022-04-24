@@ -8,4 +8,8 @@ public class Teacher extends User {
         this.academicDegree = academicDegree;
     }
 
+    @Override
+    public String toString() {
+        return "Nauczyciel "+academicDegree;
+    }
 }

@@ -7,4 +7,10 @@ public class Student extends User {
         super(firstName, lastName, email, password);
         this.albumNumber = albumNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Student nr albumu = "+albumNumber;
+    }
+
 }
