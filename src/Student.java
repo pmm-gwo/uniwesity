@@ -15,4 +15,8 @@ public class Student extends User {
         return "Student nr albumu = "+albumNumber;
     }
 
+    @Override
+    public UserRole getRole() {
+        return UserRole.STUDENT;
+    }
 }

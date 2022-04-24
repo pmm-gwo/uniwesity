@@ -15,6 +15,8 @@ public class LoginForm {
                 .findByEmailAndPassword(email, password);
         if (loggedUser != null) {
             System.out.println("Zalogowano jako " + loggedUser);
+            UserRole role = loggedUser.getRole();
+            System.out.println("Twoja funkcja: "+ role.getTranslated());
         } else {
             System.out.println("Dane nieprawidłowe, spróbuj ponownie");
             initialize();

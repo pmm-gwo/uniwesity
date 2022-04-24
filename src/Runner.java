@@ -1,7 +1,7 @@
 public class Runner {
 
     public static void main(String[] args) {
-        test();
+//        test();
         LoginForm loginForm = new LoginForm();
         loginForm.initialize();
     }
@@ -13,6 +13,10 @@ public class Runner {
                 "kowalska@gmail.com", "malg@onE", "mgr");
         Administrator administrator1 = new Administrator("Witold", "Kowalski",
                 "witek35@gmail.com", "Qwert@e9x3");
+
+        UserRole role1 = UserRole.STUDENT;
+        UserRole role2 = UserRole.TEACHER;
+        UserRole role3 = UserRole.ADMINISTRATOR;
 
         FileUserRepository fileUserRepository = new FileUserRepository();
         fileUserRepository.insert(student1);

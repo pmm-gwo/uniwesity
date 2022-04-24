@@ -24,4 +24,6 @@ public abstract class User implements Serializable {
         return password;
     }
 
+    public abstract UserRole getRole();
+
 }
