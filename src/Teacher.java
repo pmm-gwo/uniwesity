@@ -11,11 +11,6 @@ public class Teacher extends User {
     }
 
     @Override
-    public String toString() {
-        return "Nauczyciel "+academicDegree;
-    }
-
-    @Override
     public UserRole getRole() {
         return UserRole.TEACHER;
     }

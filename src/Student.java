@@ -11,11 +11,6 @@ public class Student extends User {
     }
 
     @Override
-    public String toString() {
-        return "Student nr albumu = "+albumNumber;
-    }
-
-    @Override
     public UserRole getRole() {
         return UserRole.STUDENT;
     }

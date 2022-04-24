@@ -5,11 +5,6 @@ public class Administrator extends User {
     }
 
     @Override
-    public String toString() {
-        return "Administrator";
-    }
-
-    @Override
     public UserRole getRole() {
         return UserRole.ADMINISTRATOR;
     }
