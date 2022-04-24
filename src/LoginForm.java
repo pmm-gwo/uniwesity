@@ -19,10 +19,27 @@ public class LoginForm {
         if (loggedUser != null) {
             System.out.println("Zalogowano jako:");
             System.out.println(loggedUser);
+            UserRole role = loggedUser.getRole();
+            SystemMenuView systemMenuView = createMenuView(role);
+            systemMenuView.initialize();
         } else {
             System.out.println("Dane nieprawidłowe, spróbuj ponownie");
             initialize();
         }
+    }
+
+    private SystemMenuView createMenuView(UserRole role) {
+        SystemMenuView systemMenuView;
+        if (role == UserRole.ADMINISTRATOR) {
+            systemMenuView = new AdministratorMenuView();
+        } else if (role == UserRole.STUDENT) {
+            systemMenuView = new StudentMenuView();
+        } else if (role == UserRole.TEACHER) {
+            systemMenuView = new TeacherMenuView();
+        } else {
+            throw new RuntimeException("Not supported");
+        }
+        return systemMenuView;
     }
 
 }
