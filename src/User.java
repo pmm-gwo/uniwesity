@@ -32,4 +32,12 @@ public abstract class User implements Serializable {
                 "Funkcja: "+getRole().getTranslated();
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
 }

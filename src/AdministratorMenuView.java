@@ -14,7 +14,8 @@ public class AdministratorMenuView extends SystemMenuView {
         AdministratorMenuItem menuItem = AdministratorMenuItem.ofNr(nr);
         switch (menuItem) {
             case USER_LIST:
-                System.out.println("lista użytkowników");
+                UserListView userListView = new UserListView();
+                userListView.initialize();
                 initialize();
                 break;
         }
