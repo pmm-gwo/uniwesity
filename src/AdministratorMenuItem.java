@@ -1,7 +1,14 @@
 public enum AdministratorMenuItem {
 
-    USER_LIST,
-    EXIT;
+    USER_LIST(1),
+
+    EXIT(2);
+
+    private int nr;
+
+    AdministratorMenuItem(int nr) {
+        this.nr = nr;
+    }
 
     public String getTranslated() {
         switch (this) {
@@ -11,6 +18,10 @@ public enum AdministratorMenuItem {
                 return "wyjście z programu";
         }
         throw new RuntimeException("Not supported");
+    }
+
+    public int getNr() {
+        return nr;
     }
 
 }
