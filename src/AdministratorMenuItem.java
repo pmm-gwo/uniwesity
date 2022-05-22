@@ -10,6 +10,16 @@ public enum AdministratorMenuItem {
         this.nr = nr;
     }
 
+    public static AdministratorMenuItem ofNr(int nr) {
+        AdministratorMenuItem[] items = values();
+        for (AdministratorMenuItem item: items) {
+            if (item.nr == nr) {
+                return item;
+            }
+        }
+        return AdministratorMenuItem.EXIT;
+    }
+
     public String getTranslated() {
         switch (this) {
             case USER_LIST:
