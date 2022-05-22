@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
 public class AdministratorMenuView extends SystemMenuView {
+
+    private UserRepository userRepository;
+
+    public AdministratorMenuView(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public void initialize() {
         System.out.println("MENU ADMINISTRATORA");
@@ -14,7 +21,7 @@ public class AdministratorMenuView extends SystemMenuView {
         AdministratorMenuItem menuItem = AdministratorMenuItem.ofNr(nr);
         switch (menuItem) {
             case USER_LIST:
-                UserListView userListView = new UserListView();
+                UserListView userListView = new UserListView(userRepository);
                 userListView.initialize();
                 initialize();
                 break;

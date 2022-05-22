@@ -3,11 +3,16 @@ import java.util.List;
 
 public class UserListView {
 
+    private UserRepository userRepository;
+
+    public UserListView(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     public void initialize() {
         System.out.println("========= LISTA UŻYTKOWNIKÓW =========");
         System.out.println("Imię\tNazwisko\tE-mail\tFunkcja");
-        FileUserRepository fileUserRepository = new FileUserRepository();
-        List<User> users = fileUserRepository.findAll();
+        List<User> users = userRepository.findAll();
         users.sort(new UserComparator());
         for (User user: users) {
             System.out.println(user.getFirstName()+"\t"+user.getLastName()

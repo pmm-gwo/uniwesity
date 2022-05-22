@@ -1,12 +1,13 @@
 public class Runner {
 
     public static void main(String[] args) {
-//        test();
-        LoginForm loginForm = new LoginForm();
+//        testFile();
+        UserRepository userRepository = new FileUserRepository();
+        LoginForm loginForm = new LoginForm(userRepository);
         loginForm.initialize();
     }
 
-    private static void test() {
+    private static void testFile() {
         Student student1 = new Student("Jan", "Bobowski",
                 "janek342@gmail.com", "Jan@13", 344421L);
         Teacher teacher1 = new Teacher("Małgorzata", "Kowalska",
